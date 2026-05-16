@@ -1,0 +1,60 @@
+======================================================================
+IMPROVED MODEL TRAINING REPORT
+======================================================================
+
+DATASET INFORMATION
+----------------------------------------
+Training samples: 969
+Test samples: 243
+Features used: 15
+Selected features: i, d, e, t, v, total_Opnd, loc, uniq_Opnd, n, total_Op, uniq_Op, b, lOCode, lOBlank, branchCount
+
+MODEL PERFORMANCE
+----------------------------------------
+
+Random Forest:
+  Accuracy: 0.6955
+  Precision: 0.2963
+  Recall: 0.1270
+  F1-Score: 0.1778
+  AUC-ROC: 0.6109
+
+XGBoost:
+  Accuracy: 0.7160
+  Precision: 0.3333
+  Recall: 0.0952
+  F1-Score: 0.1481
+  AUC-ROC: 0.6034
+
+Logistic Regression:
+  Accuracy: 0.7449
+  Precision: 0.5200
+  Recall: 0.2063
+  F1-Score: 0.2955
+  AUC-ROC: 0.6008
+
+HYPERPARAMETERS
+----------------------------------------
+
+Random Forest:
+  class_weight: None
+  max_depth: 10
+  min_samples_leaf: 2
+  min_samples_split: 2
+  n_estimators: 100
+
+XGBoost:
+  colsample_bytree: 1.0
+  learning_rate: 0.01
+  max_depth: 3
+  n_estimators: 300
+  subsample: 0.8
+
+Logistic Regression:
+  C: 1
+  class_weight: None
+  penalty: l2
+  solver: lbfgs
+
+BEST MODEL: Logistic Regression
+Best F1-Score: 0.2955

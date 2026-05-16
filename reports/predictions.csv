@@ -1,0 +1,7 @@
+Module,Description,Bug Probability,Risk Level,Prediction
+PaymentService.java,High complexity payment processing,100.0%,HIGH,BUGGY
+UserAuth.java,Simple authentication module,99.1%,HIGH,BUGGY
+DatabaseHandler.java,Complex database operations,100.0%,HIGH,BUGGY
+ReportGenerator.java,Medium complexity reporting,97.8%,HIGH,BUGGY
+CacheManager.java,Caching with moderate complexity,100.0%,HIGH,BUGGY
+SimpleUtil.java,Simple utility functions,90.8%,HIGH,BUGGY

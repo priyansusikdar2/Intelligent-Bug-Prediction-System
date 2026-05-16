@@ -1,0 +1,10 @@
+============================================================
+RISK ANALYSIS REPORT
+============================================================
+
+Medium Risk: 166 modules (68.3%)
+Low Risk: 43 modules (17.7%)
+High Risk: 34 modules (14.0%)
+
+Total Modules: 243
+Average Risk Score: 46.82
