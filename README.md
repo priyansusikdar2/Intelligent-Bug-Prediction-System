@@ -6,22 +6,22 @@ An AI-powered software quality analysis application that predicts bug-prone modu
 
 # 📋 Table of Contents
 
-- [Overview](#overview)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Usage Guide](#usage-guide)
-- [API Documentation](#api-documentation)
-- [Model Performance](#model-performance)
-- [Risk Scoring](#risk-scoring)
-- [Reports & Visualizations](#reports--visualizations)
-- [Troubleshooting](#troubleshooting)
-- [Future Enhancements](#future-enhancements)
-- [Sample Output](#sample-output)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
-- [Contact](#contact)
+- [Overview]
+- [Features]
+- [Technologies Used]
+- [Project Structure]
+- [Installation]
+- [Usage Guide]
+- [API Documentation]
+- [Model Performance]
+- [Risk Scoring]
+- [Reports & Visualizations]
+- [Troubleshooting]
+- [Future Enhancements]
+- [Sample Output]
+- [License]
+- [Acknowledgments]
+- [Contact]
 
 ---
 
