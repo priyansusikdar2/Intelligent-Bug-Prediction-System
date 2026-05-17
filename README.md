@@ -364,15 +364,6 @@ tester.close()
 
 ---
 
-# 📡 API Documentation
-
-## 🔐 Authentication
-
-All endpoints require API key:
-
-```text
-X-API-Key: your-api-key-here
-```
 
 ---
 
