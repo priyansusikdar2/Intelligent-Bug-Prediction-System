@@ -1,0 +1,61 @@
+======================================================================
+SELENIUM WEB TESTING REPORT
+======================================================================
+Generated: 2026-05-17 11:08:53
+Browser: chrome
+Pages Analyzed: 3
+
+PAGE METRICS SUMMARY
+----------------------------------------
+
+📄 GitHub
+   URL: https://github.com
+   Title: GitHub · Change is constant. GitHub keeps you ahead. · GitHub
+   Lines of Code (approx): 5784
+   Complexity Score: 19.3
+   Branch Count: 100
+   Total Elements: 1928
+   JavaScript Errors: 0
+   Dynamic Elements: 0
+   Load Time: 3922ms
+   Risk Level: 🟢 LOW
+   Recommended Action: Routine QA
+
+📄 Stack Overflow
+   URL: https://stackoverflow.com
+   Title: Just a moment...
+   Lines of Code (approx): 135
+   Complexity Score: 30.4
+   Branch Count: 2
+   Total Elements: 45
+   JavaScript Errors: 3
+   Dynamic Elements: 0
+   Load Time: 834ms
+   Risk Level: 🟡 MEDIUM
+   Recommended Action: Schedule for testing
+
+📄 Python.org
+   URL: https://python.org
+   Title: Welcome to Python.org
+   Lines of Code (approx): 2703
+   Complexity Score: 19.0
+   Branch Count: 100
+   Total Elements: 901
+   JavaScript Errors: 1
+   Dynamic Elements: 0
+   Load Time: 868ms
+   Risk Level: 🟢 LOW
+   Recommended Action: Routine QA
+
+======================================================================
+SUMMARY STATISTICS
+----------------------------------------
+Average Complexity: 22.9
+Average JS Errors: 1.3
+High Risk Pages: 0
+
+======================================================================
+RECOMMENDATIONS
+----------------------------------------
+✓ No high-risk pages detected
+   • Continue regular testing schedule

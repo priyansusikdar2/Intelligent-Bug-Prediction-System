@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://www.python.org",
+    "title": "Welcome to Python.org",
+    "has_https": true,
+    "has_title": true
+  },
+  {
+    "url": "https://github.com",
+    "title": "GitHub \u00b7 Change is constant. GitHub keeps you ahead. \u00b7 GitHub",
+    "has_https": true,
+    "has_title": true
+  },
+  {
+    "url": "https://www.wikipedia.org",
+    "title": "Wikipedia",
+    "has_https": true,
+    "has_title": true
+  }
+]
