@@ -134,10 +134,6 @@ Intelligent-Bug-Prediction-System/
 │   ├── risk_report.txt
 │   └── predictions.csv
 │
-├── notebooks/
-│   ├── EDA.ipynb
-│   ├── Model_Training.ipynb
-│   └── Feature_Engineering.ipynb
 │
 ├── selenium_testing.py
 ├── web_test_suite.py
