@@ -6,22 +6,19 @@ An AI-powered software quality analysis application that predicts bug-prone modu
 
 # 📋 Table of Contents
 
-- [Overview]
-- [Features]
-- [Technologies Used]
-- [Project Structure]
-- [Installation]
-- [Usage Guide]
-- [API Documentation]
-- [Model Performance]
-- [Risk Scoring]
-- [Reports & Visualizations]
-- [Troubleshooting]
-- [Future Enhancements]
-- [Sample Output]
-- [License]
-- [Acknowledgments]
-- [Contact]
+- [Overview](#overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Usage Guide](#usage-guide)
+- [Selenium Web Testing Integration](#selenium-web-testing-integration)
+- [API Documentation](#api-documentation)
+- [Model Performance](#model-performance)
+- [Risk Scoring](#risk-scoring)
+- [Reports & Visualizations](#reports--visualizations)
+- [Troubleshooting](#troubleshooting)
+- [Future Enhancements](#future-enhancements)
 
 ---
 
@@ -29,30 +26,42 @@ An AI-powered software quality analysis application that predicts bug-prone modu
 
 The Intelligent Bug Prediction System analyzes historical software metrics and defect datasets to identify modules likely to be affected by bugs. By leveraging machine learning algorithms, it generates risk scores for software modules, enabling development teams to prioritize testing activities effectively.
 
-## 🔍 How It Works
+## 🔄 How It Works
 
-1. **Data Collection** – Load historical software metrics (NASA PROMISE dataset)
-2. **Preprocessing** – Clean, scale, and prepare data for analysis
-3. **Feature Selection** – Identify most important software metrics
-4. **Model Training** – Train multiple ML models on historical data
-5. **Prediction** – Analyze new modules for bug probability
-6. **Risk Scoring** – Generate risk levels (Low/Medium/High)
-7. **Reporting** – Create visualizations and comprehensive reports
+1. **Data Collection** - Load historical software metrics (NASA PROMISE dataset)
+2. **Preprocessing** - Clean, scale, and prepare data for analysis
+3. **Feature Selection** - Identify most important software metrics
+4. **Model Training** - Train multiple ML models on historical data
+5. **Prediction** - Analyze new modules for bug probability
+6. **Risk Scoring** - Generate risk levels (Low/Medium/High)
+7. **Reporting** - Create visualizations and comprehensive reports
+8. **Web Testing** - Automate web application testing with Selenium
 
 ---
 
 # ✨ Features
 
-## ✅ Core Features
+## 🚀 Core Features
 
-- 🔮 **Real-time Bug Prediction** – Predict bug probability for any software module
-- 🤖 **Multiple ML Models** – Logistic Regression, Random Forest, XGBoost
-- 📊 **Interactive Dashboard** – Streamlit-based web interface
-- 📈 **Model Performance Comparison** – Visual comparison of all models
-- ⚠️ **Risk Scoring System** – Low, Medium, High risk classification
-- 📁 **Automatic Report Generation** – Save all results as images and text files
-- 🔄 **Batch Processing** – Analyze multiple modules simultaneously
-- 🎯 **Feature Importance Analysis** – Identify key metrics affecting bugs
+- 🔮 **Real-time Bug Prediction** - Predict bug probability for any software module
+- 🤖 **Multiple ML Models** - Logistic Regression, Random Forest, XGBoost
+- 📊 **Interactive Dashboard** - Streamlit-based web interface
+- 📈 **Model Performance Comparison** - Visual comparison of all models
+- ⚠️ **Risk Scoring System** - Low, Medium, High risk classification
+- 📁 **Automatic Report Generation** - Save all results as images and text files
+- 🔄 **Batch Processing** - Analyze multiple modules simultaneously
+- 🎯 **Feature Importance Analysis** - Identify key metrics affecting bugs
+
+## 🌐 Selenium Web Testing Features
+
+- 🌐 **Automated Website Testing** - Test web applications for bugs
+- 📊 **Real-time Metrics Collection** - Gather page complexity, load times, JS errors
+- 🔍 **DOM Analysis** - Count elements, forms, links, and dynamic components
+- ⏱️ **Performance Monitoring** - Track page load performance
+- 🔒 **Security Header Testing** - Verify HTTPS and security configurations
+- 📱 **Responsive Design Testing** - Test across different screen sizes
+- 📈 **Visual Regression** - Compare screenshots for visual bugs
+- 🤖 **Automated Test Generation** - Create tests based on risk predictions
 
 ## 📊 Visualization Capabilities
 
@@ -62,6 +71,7 @@ The Intelligent Bug Prediction System analyzes historical software metrics and d
 - Risk distribution charts
 - Model performance comparison graphs
 - Risk heatmaps
+- Website performance dashboards
 
 ---
 
@@ -75,6 +85,7 @@ The Intelligent Bug Prediction System analyzes historical software metrics and d
 | **Visualization** | Matplotlib, Seaborn, Plotly |
 | **Dashboard** | Streamlit |
 | **API Framework** | Flask |
+| **Web Testing** | Selenium, WebDriver Manager |
 | **Model Serialization** | Joblib |
 | **Dataset** | NASA PROMISE Repository |
 
@@ -86,49 +97,56 @@ The Intelligent Bug Prediction System analyzes historical software metrics and d
 Intelligent-Bug-Prediction-System/
 │
 ├── app/
-│   ├── streamlit_app.py              # Main Streamlit dashboard
-│   ├── prediction.py                 # Prediction module
-│   └── dashboard.py                  # Standalone dashboard
+│   ├── streamlit_app.py
+│   ├── prediction.py
+│   └── dashboard.py
 │
 ├── dataset/
-│   ├── kc1.csv                       # NASA KC1 dataset
-│   ├── pc1.csv                       # NASA PC1 dataset
-│   └── cleaned_dataset.csv           # Preprocessed dataset
+│   ├── kc1.csv
+│   ├── pc1.csv
+│   └── cleaned_dataset.csv
 │
 ├── models/
-│   ├── logistic_regression.pkl       # Trained Logistic Regression
-│   ├── random_forest.pkl             # Trained Random Forest
-│   ├── xgboost.pkl                   # Trained XGBoost
-│   ├── scaler.pkl                    # Feature scaler
-│   └── selected_features.txt         # Selected features list
+│   ├── logistic_regression.pkl
+│   ├── random_forest.pkl
+│   ├── xgboost.pkl
+│   ├── scaler.pkl
+│   └── selected_features.txt
 │
 ├── src/
-│   ├── data_preprocessing.py         # Data cleaning & preparation
-│   ├── feature_selection.py          # Feature importance analysis
-│   ├── train_model.py                # Model training module
-│   ├── evaluate_model.py             # Model evaluation
-│   ├── risk_scoring.py               # Risk analysis
-│   └── utils.py                      # Utility functions
+│   ├── data_preprocessing.py
+│   ├── feature_selection.py
+│   ├── train_model.py
+│   ├── evaluate_model.py
+│   ├── risk_scoring.py
+│   └── utils.py
 │
 ├── reports/
-│   ├── confusion_matrix_*.png        # Confusion matrix plots
-│   ├── roc_curves.png                # ROC curves comparison
-│   ├── model_comparison.png          # Model performance chart
-│   ├── feature_importance.png        # Feature importance plot
-│   ├── risk_distribution.png         # Risk level distribution
-│   ├── evaluation_report.txt         # Model evaluation report
-│   ├── risk_report.txt               # Risk analysis report
-│   └── predictions.csv               # Prediction results
+│   ├── confusion_matrix_*.png
+│   ├── roc_curves.png
+│   ├── model_comparison.png
+│   ├── feature_importance.png
+│   ├── risk_distribution.png
+│   ├── selenium_report_*.txt
+│   ├── page_metrics.json
+│   ├── performance_data.json
+│   ├── evaluation_report.txt
+│   ├── risk_report.txt
+│   └── predictions.csv
 │
 ├── notebooks/
-│   ├── EDA.ipynb                     # Exploratory data analysis
-│   ├── Model_Training.ipynb          # Training experiments
-│   └── Feature_Engineering.ipynb     # Feature engineering
+│   ├── EDA.ipynb
+│   ├── Model_Training.ipynb
+│   └── Feature_Engineering.ipynb
 │
-├── api.py                            # Flask API server
-├── main.py                           # Main execution script
-├── requirements.txt                 # Python dependencies
-└── README.md                         # Project documentation
+├── selenium_testing.py
+├── web_test_suite.py
+├── monitor_websites.py
+├── test_selenium_simple.py
+├── api.py
+├── main.py
+├── requirements.txt
+└── README.md
 ```
 
 ---
@@ -139,34 +157,33 @@ Intelligent-Bug-Prediction-System/
 
 - Python 3.11 or higher
 - pip package manager
+- Google Chrome browser (for Selenium testing)
 
----
-
-## ⚙️ Step-by-Step Installation
+## ⚡ Step-by-Step Installation
 
 ```bash
 # 1. Clone the repository
 git clone https://github.com/your-username/Intelligent-Bug-Prediction-System.git
 
-# 2. Navigate into the project directory
+# 2. Navigate to project folder
 cd Intelligent-Bug-Prediction-System
 
-# 3. Create a virtual environment (recommended)
+# 3. Create virtual environment
 python -m venv venv
 
-# 4. Activate virtual environment
+# Activate virtual environment
 
-# On Windows:
+# Windows
 venv\Scripts\activate
 
-# On Linux/Mac:
+# Linux / Mac
 source venv/bin/activate
 
-# 5. Install dependencies
+# 4. Install dependencies
 pip install -r requirements.txt
 
-# 6. Verify installation
-python -c "import sklearn, xgboost, streamlit; print('All dependencies installed successfully!')"
+# 5. Verify installation
+python -c "import sklearn, xgboost, streamlit, selenium; print('All dependencies installed successfully!')"
 ```
 
 ---
@@ -184,6 +201,10 @@ streamlit==1.25.0
 flask==2.3.3
 joblib==1.3.2
 plotly==5.15.0
+selenium==4.15.0
+webdriver-manager==4.0.1
+requests==2.31.0
+Pillow==10.0.0
 ```
 
 ---
@@ -192,7 +213,7 @@ plotly==5.15.0
 
 ## 1️⃣ Prepare Dataset
 
-Place your NASA PROMISE datasets (`kc1.csv`, `pc1.csv`, etc.) in the `dataset/` folder.
+Place NASA PROMISE datasets (`kc1.csv`, `pc1.csv`, etc.) inside the `dataset/` folder.
 
 ---
 
@@ -209,7 +230,7 @@ python main.py
 - Train all three models
 - Evaluate model performance
 - Generate risk analysis
-- Save all reports and visualizations
+- Save reports and visualizations
 
 ---
 
@@ -219,19 +240,11 @@ python main.py
 streamlit run app/streamlit_app.py
 ```
 
-### Access Dashboard
+Access dashboard at:
 
 ```text
 http://localhost:8501
 ```
-
-### Dashboard Features
-
-- 📊 Overview Page – Dataset statistics and visualizations
-- 🔮 Predict Page – Interactive module prediction
-- 📈 Performance Page – Model comparison metrics
-- ⚠️ Risk Analysis Page – Risk distribution and heatmaps
-- 📁 Reports Page – View all saved visualizations
 
 ---
 
@@ -241,7 +254,7 @@ http://localhost:8501
 python api.py
 ```
 
-### API URL
+API runs at:
 
 ```text
 http://localhost:5000
@@ -249,7 +262,25 @@ http://localhost:5000
 
 ---
 
-## 5️⃣ Make Predictions
+## 5️⃣ Run Selenium Web Tests
+
+```bash
+# Test Selenium setup
+python test_selenium_simple.py
+
+# Collect website metrics
+python selenium_testing.py
+
+# Run comprehensive test suite
+python web_test_suite.py
+
+# Analyze collected metrics
+python monitor_websites.py
+```
+
+---
+
+## 6️⃣ Make Predictions
 
 ### Using Python
 
@@ -257,13 +288,10 @@ http://localhost:5000
 import requests
 import json
 
-# API endpoint
 url = "http://localhost:5000/predict"
 
-# API key
-api_key = "95c01f189f2bf1a17acd99a4a550e5b5e45f2183000d6e480b74af8810dab177"
+api_key = "YOUR_API_KEY"
 
-# Module features
 data = {
     "module_name": "PaymentService.java",
     "features": {
@@ -274,7 +302,6 @@ data = {
     }
 }
 
-# Make prediction request
 response = requests.post(
     url,
     headers={
@@ -284,18 +311,15 @@ response = requests.post(
     json=data
 )
 
-# Print response
 print(response.json())
 ```
-
----
 
 ### Using cURL
 
 ```bash
 curl -X POST http://localhost:5000/predict \
   -H "Content-Type: application/json" \
-  -H "X-API-Key: 95c01f189f2bf1a17acd99a4a550e5b5e45f2183000d6e480b74af8810dab177" \
+  -H "X-API-Key: YOUR_API_KEY" \
   -d '{
     "module_name": "TestModule.java",
     "features": {
@@ -308,13 +332,47 @@ curl -X POST http://localhost:5000/predict \
 
 ---
 
+# 🧪 Selenium Web Testing Integration
+
+## 📊 Website Metrics Collected
+
+| Metric | Description |
+|--------|-------------|
+| Lines of Code | Estimated code complexity |
+| Cyclomatic Complexity | Page structure complexity |
+| Branch Count | Interactive elements |
+| Load Time | Page load performance |
+| JavaScript Errors | Client-side issues |
+| DOM Elements | Total page elements |
+| Dynamic Elements | React/Angular/Vue components |
+| Forms & Iframes | Interactive element count |
+
+---
+
+## ▶️ Run Selenium Tests
+
+```python
+from selenium_testing import SeleniumBugPredictor
+
+tester = SeleniumBugPredictor(browser='chrome', headless=True)
+
+metrics = tester.collect_page_metrics(
+    'https://example.com',
+    'Homepage'
+)
+
+tester.generate_demo_report([metrics])
+
+tester.close()
+```
+
+---
+
 # 📡 API Documentation
 
 ## 🔐 Authentication
 
-All API endpoints require an API key.
-
-### Header Format
+All endpoints require API key:
 
 ```text
 X-API-Key: your-api-key-here
@@ -322,15 +380,9 @@ X-API-Key: your-api-key-here
 
 ---
 
-# 📍 Endpoints
+## 📍 Endpoints
 
----
-
-## ✅ GET /health
-
-Check API health status.
-
-### Response
+### GET /health
 
 ```json
 {
@@ -344,11 +396,9 @@ Check API health status.
 
 ---
 
-## 🔮 POST /predict
+### POST /predict
 
-Predict bug probability for a single module.
-
-### Request Body
+#### Request
 
 ```json
 {
@@ -362,7 +412,7 @@ Predict bug probability for a single module.
 }
 ```
 
-### Response
+#### Response
 
 ```json
 {
@@ -371,104 +421,23 @@ Predict bug probability for a single module.
     "bug_probability": 0.635,
     "risk_score": 63.5,
     "risk_level": "MEDIUM"
-  },
-  "model_predictions": {
-    "logistic": {
-      "bug_probability": 1.0,
-      "risk_score": 100.0,
-      "risk_level": "HIGH",
-      "action": "Test immediately!"
-    },
-    "random_forest": {
-      "bug_probability": 0.52,
-      "risk_score": 52.0,
-      "risk_level": "MEDIUM",
-      "action": "Schedule for testing"
-    },
-    "xgboost": {
-      "bug_probability": 0.386,
-      "risk_score": 38.6,
-      "risk_level": "MEDIUM",
-      "action": "Schedule for testing"
-    }
   }
 }
 ```
 
 ---
 
-## 📦 POST /predict/batch
-
-Predict for multiple modules simultaneously (max 100 modules).
-
-### Request Body
-
-```json
-{
-  "modules": [
-    {
-      "module_name": "Module1.java",
-      "features": {
-        "loc": 1500,
-        "v(g)": 25,
-        "branchCount": 30
-      }
-    },
-    {
-      "module_name": "Module2.java",
-      "features": {
-        "loc": 500,
-        "v(g)": 8,
-        "branchCount": 10
-      }
-    }
-  ]
-}
-```
-
----
-
-## 📋 GET /features
-
-Returns the list of expected features.
-
----
-
 # 📊 Model Performance
 
-## 🎯 Expected Accuracy (with hyperparameter tuning)
-
 | Model | Accuracy | F1-Score | AUC-ROC | Best For |
-|------|----------|----------|----------|----------|
+|------|----------|----------|---------|----------|
 | XGBoost | 85-92% | 0.75-0.85 | 0.88-0.95 | High performance |
 | Random Forest | 82-88% | 0.70-0.80 | 0.85-0.92 | Handling overfitting |
 | Logistic Regression | 75-82% | 0.65-0.75 | 0.80-0.88 | Interpretability |
 
 ---
 
-## 📌 Confusion Matrix Explanation
-
-```text
-                 Predicted
-              Non-Buggy   Buggy
-
-Actual
-Non-Buggy        TN         FP
-Buggy            FN         TP
-```
-
-### Definitions
-
-- **TN (True Negative)** → Correctly predicted non-buggy module
-- **FP (False Positive)** → False alarm (wasted testing effort)
-- **FN (False Negative)** → Missed bug (high risk)
-- **TP (True Positive)** → Correctly identified buggy module
-
----
-
 # ⚠️ Risk Scoring
-
-## 🚦 Risk Levels
 
 | Risk Level | Probability | Action Required | Priority |
 |------------|-------------|----------------|----------|
@@ -478,48 +447,31 @@ Buggy            FN         TP
 
 ---
 
-## 📈 Risk Score Interpretation
-
-- **90-100%** → Extremely high risk – Critical bugs expected
-- **70-89%** → High risk – Immediate testing required
-- **50-69%** → Medium-high risk – Priority testing
-- **30-49%** → Medium-low risk – Normal priority
-- **0-29%** → Low risk – Standard QA process
-
----
-
 # 📁 Reports & Visualizations
 
-All reports are automatically saved in the `reports/` folder.
-
-## 📄 Generated Files
+Generated automatically in `reports/` folder:
 
 | File | Description |
 |------|-------------|
-| confusion_matrix_*.png | Confusion matrix for each model |
-| roc_curves.png | ROC curves comparison |
-| model_comparison.png | Performance comparison bar chart |
-| feature_importance.png | Top features affecting predictions |
-| risk_distribution.png | Risk level distribution pie chart |
-| risk_analysis_score_distribution.png | Risk score histogram |
-| risk_analysis_heatmap.png | Risk heatmap for top modules |
-| evaluation_report.txt | Detailed model metrics |
-| risk_report.txt | Comprehensive risk analysis |
-| training_report.txt | Model training details |
-| feature_selection_report.txt | Feature importance rankings |
-| predictions.csv | All prediction results |
+| confusion_matrix_*.png | Confusion matrices |
+| roc_curves.png | ROC comparison |
+| model_comparison.png | Performance charts |
+| feature_importance.png | Important features |
+| risk_distribution.png | Risk distribution |
+| selenium_report_*.txt | Selenium reports |
+| page_metrics.json | Website metrics |
+| performance_data.json | Performance data |
+| evaluation_report.txt | Evaluation metrics |
+| risk_report.txt | Risk analysis |
+| predictions.csv | Prediction results |
 
 ---
 
 # 🔧 Troubleshooting
 
-## ❌ Common Issues and Solutions
+## ❌ Common Issues
 
----
-
-### 1️⃣ ImportError: No module named 'src'
-
-### ✅ Solution
+### 1. ImportError: No module named 'src'
 
 ```bash
 cd Intelligent-Bug-Prediction-System
@@ -528,70 +480,43 @@ python main.py
 
 ---
 
-### 2️⃣ FileNotFoundError: dataset/kc1.csv not found
-
-### ✅ Solution
-
-Place dataset files inside the `dataset/` folder or generate sample data.
+### 2. Selenium WebDriver not found
 
 ```bash
-python create_sample_data.py
+pip install --upgrade selenium webdriver-manager
+python test_selenium_simple.py
 ```
 
 ---
 
-### 3️⃣ Model expects 20 features but got 21
+### 3. Dataset not found
 
-### ✅ Solution
+Place datasets inside:
 
-The feature `locCodeAndComment` was dropped during feature selection.
-
-Use the provided prediction scripts which automatically align features.
-
----
-
-
----
-
-### 5️⃣ Low model accuracy
-
-## ✅ Possible Improvements
-
-- Run hyperparameter tuning:
-
-```bash
-python improve_model.py
+```text
+dataset/
 ```
 
-- Increase training data
-- Improve data quality
-- Apply feature engineering
-- Use class balancing (SMOTE)
-- Use cross-validation
-- Combine ensemble methods
-
 ---
 
-# ⚡ Performance Optimization Tips
+### 4. API Key Invalid
 
-- 📈 Increase training dataset size
-- 🧠 Add domain-specific software metrics
-- 🔄 Combine multiple ensemble models
-- ⚖️ Handle class imbalance properly
-- 📊 Use k-fold cross validation
+Check `api.py` for correct API key.
 
 ---
 
 # 🎯 Future Enhancements
 
 - 🔄 Real-time GitHub integration
-- 🧠 Deep Learning models (LSTM/Transformers)
-- 📱 Mobile application support
-- ☁️ Cloud deployment (AWS/Azure/GCP)
-- 📊 Interactive advanced visualizations
-- 🔐 Multi-tenant team support
-- 📈 Risk trend analysis over time
-- 🤝 VS Code / IntelliJ plugins
+- 🧠 Deep Learning models
+- 📱 Mobile application
+- ☁️ Cloud deployment
+- 📊 Advanced visualizations
+- 🔐 Multi-tenant support
+- 📈 Trend analysis
+- 🤝 IDE plugins
+- 🌐 Cross-browser testing
+- 📸 Visual regression automation
 
 ---
 
@@ -606,7 +531,6 @@ INTELLIGENT BUG PREDICTION SYSTEM
 
 [Step 1] Data Preprocessing...
 ✓ Training set: (969, 21)
-✓ Test set: (243, 21)
 
 [Step 2] Feature Selection...
 ✓ Selected 20 important features
@@ -616,62 +540,48 @@ INTELLIGENT BUG PREDICTION SYSTEM
 
 [Step 4] Model Evaluation...
 ✓ Best Model: XGBoost
+```
 
-[Step 5] Risk Scoring...
-✓ Risk analysis complete
+---
 
+## 🧪 Selenium Test Output
+
+```text
 ============================================================
-PROJECT EXECUTION SUMMARY
+🧪 SELENIUM WEB TESTING INTEGRATION
 ============================================================
 
-📊 Dataset Information:
-  - Total samples: 1212
-  - Buggy modules: 63 (25.9%)
+✓ Chrome WebDriver initialized (Headless: True)
 
-🎯 Model Performance:
-  XGBoost: Accuracy: 0.9045, F1-Score: 0.8678
+📊 Analyzing: GitHub - https://github.com
+✓ Elements: 1928, JS Errors: 0, Complexity: 19.3
 
-⚠️ Risk Analysis:
-  - High Risk: 34 modules (14.0%)
-  - Average Risk Score: 46.82%
+📊 Analyzing: Stack Overflow - https://stackoverflow.com
+✓ Elements: 45, JS Errors: 3, Complexity: 30.4
+
+✓ Report saved successfully
 ```
 
 ---
 
 # 📝 License
 
-This project is licensed under the **MIT License**.
-
-See the `LICENSE` file for more details.
+This project is licensed under the MIT License.
 
 ---
 
 # 🙏 Acknowledgments
 
-- NASA PROMISE Repository for software defect datasets
+- NASA PROMISE Repository
 - Scikit-learn community
-- XGBoost developers
-- Streamlit open-source contributors
-- Open-source ML ecosystem contributors
+- XGBoost contributors
+- Streamlit developers
+- Selenium WebDriver team
 
 ---
 
 # 📧 Contact
 
-For questions, feature requests, or support:
+For questions or support, open an issue on GitHub.
 
-- Open an issue on GitHub
-- Contact the project maintainers
-
----
-
-# ⭐ Support the Project
-
-If you found this project useful:
-
-⭐ Star the repository on GitHub  
-🍴 Fork the project  
-🐛 Report issues  
-🤝 Contribute improvements
-
----
+⭐ Star this repository if you find it useful!
