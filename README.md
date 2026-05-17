@@ -6,19 +6,19 @@ An AI-powered software quality analysis application that predicts bug-prone modu
 
 # 📋 Table of Contents
 
-- [Overview](#overview)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Usage Guide](#usage-guide)
-- [Selenium Web Testing Integration](#selenium-web-testing-integration)
-- [API Documentation](#api-documentation)
-- [Model Performance](#model-performance)
-- [Risk Scoring](#risk-scoring)
-- [Reports & Visualizations](#reports--visualizations)
-- [Troubleshooting](#troubleshooting)
-- [Future Enhancements](#future-enhancements)
+- [Overview]
+- [Features]
+- [Technologies Used]
+- [Project Structure]
+- [Installation]
+- [Usage Guide]
+- [Selenium Web Testing Integration]
+- [API Documentation]
+- [Model Performance]
+- [Risk Scoring]
+- [Reports & Visualizations]
+- [Troubleshooting]
+- [Future Enhancements]
 
 ---
 
